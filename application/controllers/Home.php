@@ -19,9 +19,9 @@ class Home extends CI_Controller
             $this->load->view('index_message');
         } else {
             $data = array(
-                'name' => $this->input->post('name'),
-                'rating' => $this->input->post('rating'),
-                'comment' => $this->input->post('comment')
+                'name' => $this->input->post('name', true),
+                'rating' => $this->input->post('rating', true),
+                'comment' => $this->input->post('comment', true)
             );
 
             $this->load->model('user_model');
